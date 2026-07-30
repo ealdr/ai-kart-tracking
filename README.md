@@ -32,13 +32,12 @@ Making a stopped kart impossible to miss. A red box on a busy screen still isn't
  
 - Trained on a home PC — **RTX 4060 Ti (8GB VRAM)**.
 - **Python 3.12.3** (newer builds had no CUDA wheels at the time), GPU PyTorch build installed with `--index-url https://download.pytorch.org/whl/cu128`.
-- `workers=0` in the training command to sidestep a Windows DataLoader crash.
 
 ## Dataset
  
 - Frames pulled from track CCTV footage, labelled in Roboflow, single class `kart`.
-- A handful of full clips were **held back entirely** — never uploaded, never trained on — kept as unseen real-world test footage. That held-back set is what caught the model-selection issue above.
+- A handful of full clips were **held back entirely** - never uploaded, never trained on — kept as unseen real-world test footage. That held-back set is what caught the model-selection issue above.
 
 ## What is YOLO and Roboflow
-- **Roboflow** — a web tool for labelling images (drawing the boxes around each kart by hand) and exporting them in the format a model expects.
+- **Roboflow** - a web tool for labelling images (drawing the boxes around each kart by hand) and exporting them in the format a model expects.
 -  **YOLO ("You Only Look Once")** — a family of fast object-detection models designed to run in real time
