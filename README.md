@@ -26,5 +26,19 @@ Working out motion state. This is the core logic. I wrote a KartState class that
 
 Making a stopped kart impossible to miss. A red box on a busy screen still isn't loud enough, so for stopped karts I draw a flashing translucent fill over the kart on a copy of the frame.
 
-<img width="400" height="713" alt="Test 1_annotated_0 3" src="https://github.com/user-attachments/assets/91844bbd-dbba-4dc8-bfc0-08e58ca43333" />
-<img width="400" height="713" alt="Test 1_annotated_0 3" src="https://github.com/user-attachments/assets/663143a6-8823-4366-8bd5-a2eaae14067e" />
+<img src="Test%201_annotated_0.3.gif" alt="Annotated track footage" width="480" />
+
+## Training setup
+ 
+- Trained on a home PC — **RTX 4060 Ti (8GB VRAM)**.
+- **Python 3.12.3** (newer builds had no CUDA wheels at the time), GPU PyTorch build installed with `--index-url https://download.pytorch.org/whl/cu128`.
+- `workers=0` in the training command to sidestep a Windows DataLoader crash.
+
+## Dataset
+ 
+- Frames pulled from track CCTV footage, labelled in Roboflow, single class `kart`.
+- A handful of full clips were **held back entirely** — never uploaded, never trained on — kept as unseen real-world test footage. That held-back set is what caught the model-selection issue above.
+
+## What is YOLO and Roboflow
+- **Roboflow** — a web tool for labelling images (drawing the boxes around each kart by hand) and exporting them in the format a model expects.
+-  **YOLO ("You Only Look Once")** — a family of fast object-detection models designed to run in real time
