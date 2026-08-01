@@ -24,9 +24,9 @@ Collecting and labelling the data. I pulled frames from a different track CCTV f
 
 I wrote a KartState class that, for each tracked kart, measures how far it's actually moved over a short rolling window (about 0.4 seconds), normalised by the size of its bounding box so it works the same whether a kart is near or far from the camera. I then band that movement into three states against distance thresholds; green for driving, amber for slow, red for stopped.
 
-Making a stopped kart impossible to miss. A red box on a busy screen still isn't loud enough, so for stopped karts I draw a flashing translucent fill over the kart on a copy of the frame.
+For stopped karts I draw a flashing translucent fill over the kart on a copy of the frame.
 
-<img alt="Annotated track footage" width="480" src="Test%201_annotated_0.3.gif" />
+<img alt="Annotated track footage"  height="600" width="480" src="Test_0.3.gif" />
 
 ## Dataset
  
@@ -52,3 +52,7 @@ The biggest difference showed up on the karts far away on the track, the small h
 **At 0.3:**
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/0f5e1d9b-e5b7-4f2d-99c5-fb08406ad66a" />
 
+At 0.3, all the distant karts were picked up, and all were picked up as green, which means moving at full speed, while at 0.45 they were only picked up with a yellow box which means they are on the edge of coming to a stop.
+
+Full video:
+<img alt="Annotated track footage"  height="600" width="480" src="stoping_annotated.gif" />
