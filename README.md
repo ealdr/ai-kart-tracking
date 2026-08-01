@@ -47,12 +47,16 @@ I tested the clips with two confidence levels, 0.3 and 0.45.
 The biggest difference showed up on the karts far away on the track, the small hard to see ones.
 
 **At 0.45:**
+
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/7495a1d3-a57e-42ab-b572-580e7f036c5b" />
 
 **At 0.3:**
+
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/0f5e1d9b-e5b7-4f2d-99c5-fb08406ad66a" />
 
 At 0.3, all the distant karts were picked up, and all were picked up as green, which means moving at full speed, while at 0.45 they were only picked up with a yellow box which means they are on the edge of coming to a stop.
 
-Full video:
-<img alt="Annotated track footage"  height="600" width="480" src="stoping_annotated.gif" />
+15s video:
+
+<img alt="Annotated track footage"  height="900" width="480" src="stoping_annotated.gif" />
+
